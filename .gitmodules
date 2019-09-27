@@ -13,3 +13,6 @@
 [submodule "custom/plugins/ripz"]
 	path = custom/plugins/ripz
 	url = git@github.com:jedahan/ripz.git
+[submodule "custom/plugins/forgit"]
+	path = custom/plugins/forgit
+	url = git@github.com:wfxr/forgit.git
