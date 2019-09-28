@@ -5,7 +5,7 @@ cp ./.zshenv ~/
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 # Install shell extensions
-brew install zsh git-standup
+brew install zsh
 
 # Make zsh default shell
 chsh -s $(which zsh)
