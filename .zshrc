@@ -52,7 +52,6 @@ source "$ALIASES/projects.zsh"
 source "$ALIASES/brew.zsh"
 source "$ALIASES/git.zsh"
 source "$ALIASES/node.zsh"
-source "$ALIASES/colorls.zsh"
 
 source "$FUNCTIONS/git.zsh"
 source "$FUNCTIONS/fzf.zsh"
@@ -61,6 +60,11 @@ source "$FUNCTIONS/1password.zsh"
 # ZSH
 alias zshrc="$EDITOR $ZDOTDIR"
 alias ohmyzsh="$EDITOR $ZSH"
+
+# Pretty ls
+alias l='lsd -lAh --group-dirs first --blocks permission,size,name'
+alias la='lsd -lA --group-dirs first'
+alias lh="lsd -lA --group-dirs first .*" # show hidden files/directories only
 
 # System tune
 alias -g G='| rg -i'

@@ -14,6 +14,4 @@ chsh -s $(which zsh)
 brew install zsh-completions
 
 # Install pretty ls
-brew tap caskroom/fonts
-brew cask install font-hack-nerd-font
-gem install colorls
+brew cask install homebrew/cask-fonts/font-hack-nerd-font lsd
