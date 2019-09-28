@@ -5,6 +5,3 @@ else
     echo "Updating Homebrew"
     brew update
 fi
-
-brew cask install iterm2 fzf
-$(brew --prefix)/opt/fzf/install
