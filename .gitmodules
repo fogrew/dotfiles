@@ -7,12 +7,15 @@
 [submodule "custom/plugins/fast-syntax-highlighting"]
 	path = custom/plugins/fast-syntax-highlighting
 	url = git@github.com:zdharma/fast-syntax-highlighting.git
-[submodule "custom/themes"]
-	path = custom/themes
-	url = git@nights.site:Foggy/fogrew.zsh-theme.git
+
 [submodule "custom/plugins/ripz"]
 	path = custom/plugins/ripz
 	url = git@github.com:jedahan/ripz.git
+
 [submodule "custom/plugins/forgit"]
 	path = custom/plugins/forgit
 	url = git@github.com:wfxr/forgit.git
+
+[submodule "custom/themes/spaceship"]
+	path = custom/themes/spaceship
+	url = git@github.com:denysdovhan/spaceship-prompt.git

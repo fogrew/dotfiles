@@ -1,6 +1,9 @@
 # TODO: replace to $(pwd)
 cp ./.zshenv ~/
 
+# Add spaceship theme
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
 # Install shell extensions
 brew install zsh git-standup
 
