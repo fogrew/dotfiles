@@ -6,4 +6,5 @@ else
     brew update
 fi
 
-brew cask install iterm2
+brew cask install iterm2 fzf
+$(brew --prefix)/opt/fzf/install
