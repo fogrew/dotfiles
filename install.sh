@@ -15,3 +15,6 @@ brew install zsh-completions
 
 # Install pretty ls
 brew cask install homebrew/cask-fonts/font-hack-nerd-font lsd
+
+# Install node version manager
+brew install Schniz/tap/fnm
