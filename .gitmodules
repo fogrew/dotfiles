@@ -1,9 +1,7 @@
 [submodule "custom/plugins/colored-man-pages_mod"]
 	path = custom/plugins/colored-man-pages_mod
 	url = git@github.com:zuxfoucault/colored-man-pages_mod.git
-[submodule "custom/plugins/forgit"]
-	path = custom/plugins/forgit
-	url = git@github.com:wfxr/forgit.git
+
 [submodule "custom/plugins/fast-syntax-highlighting"]
 	path = custom/plugins/fast-syntax-highlighting
 	url = git@github.com:zdharma/fast-syntax-highlighting.git
