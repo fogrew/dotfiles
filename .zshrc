@@ -12,7 +12,8 @@ SAVEHIST=1000
 
 # press zsh -xv for check length of configs
 
-export RIPZ_TEXT="Alias tip: "
+export RIPZ_TEXT="💡 Use alias: " 
+
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_PROMPT_PREFIXES_SHOW=false
 SPACESHIP_TIME_SHOW=true
@@ -49,7 +50,7 @@ local FUNCTIONS="$ZSH_CUSTOM/functions"
 local PLUGINS="$ZSH_CUSTOM/plugins"
 
 source "$ALIASES/projects.zsh"
-source "$ALIASES/brew.zsh"
+source "$ALIASES/nginx.zsh"
 source "$ALIASES/git.zsh"
 source "$ALIASES/node.zsh"
 
@@ -60,6 +61,13 @@ source "$FUNCTIONS/1password.zsh"
 # ZSH
 alias zshrc="$EDITOR $ZDOTDIR"
 alias ohmyzsh="$EDITOR $ZSH"
+
+# Docker
+alias d="docker"
+
+# Brew
+alias brs="brew services"
+alias bri="brew install"
 
 # Pretty ls
 alias l='lsd -lAh --group-dirs first --blocks permission,size,name'

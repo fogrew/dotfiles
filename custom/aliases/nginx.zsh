@@ -1,8 +1,4 @@
 # NGINX aliases
-alias nginx.start="brew services start nginx"
-alias nginx.stop="brew services stop nginx"
-alias nginx.restart="brew services restart nginx"
-
 local ngid="/usr/local/etc/nginx"
 
 alias sites="subl $ngid/"
