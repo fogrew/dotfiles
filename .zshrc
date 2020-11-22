@@ -46,8 +46,6 @@ export FZF_BASE=~/.fzf
 export ZSH="$HOME/.oh-my-zsh"
 source "$ZSH/oh-my-zsh.sh"
 
-local ALIASES="$ZSH_CUSTOM/aliases"
-local FUNCTIONS="$ZSH_CUSTOM/functions"
 local PLUGINS="$ZSH_CUSTOM/plugins"
 
 source "$ALIASES/projects.zsh"
@@ -69,6 +67,8 @@ alias d="docker"
 # Brew
 alias brs="brew services"
 alias bri="brew install"
+local ALIASES="$ZDOTDIR/aliases"
+local FUNCTIONS="$ZDOTDIR/functions"
 
 # Pretty ls
 alias l='lsd -lAh --group-dirs first --blocks permission,size,name'

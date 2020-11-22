@@ -162,6 +162,11 @@ function git-delete-merged-branches() {
 
 }
 
+# git clone branch for review
+funciton gclb() {
+  git clone --recursive --branch $1 git@git.wrke.in:website/wg5.git $1 && cd $1 && npm ci
+}
+
 
 function oldbranches() {
   if [[ $# -eq 0 ]]; then; local hed=10; else; local hed=$1; fi
