@@ -18,6 +18,9 @@ brew install Schniz/tap/fnm
 # Install usefully terminal
 brew cask install iterm2
 
+# Install 1password
+brew install jq # for parsing answers of 1password-cli (op), see functions/1password.zsh
+brew cask install 1password-cli
 
 # Install fuzzy finder
 brew install fzf
