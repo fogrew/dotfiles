@@ -1,30 +1,31 @@
-# Git
-alias got='git'
-alias get='git'
-
 # see configs for setup git shortcuts
 # $ZSH/lib/git.zsh
 # $ZSH/plugins/git/git.plugin.zsh
-GIT_ALIASES_SHORTER_GIT_STATUS=1
-GIT_ALIASES_SILENCE_GIT_STATUS=1
-GIT_ALIASES_AUTOPUSH_NEW_BRANCH=1
-GIT_ALIASES_ICDIFF=0
+
+# GPG init
+export GPG_TTY=$(tty)
 
 # узнать, как правильно сливать ветки, чтобы при удалении ветки можно было найти историю
+alias g="git"
+alias gaa="git add --all"
+alias gb="git branch"
+alias gbc="git branch --show-current"
+alias gbd="git branch -d"
+alias gbdo="git push origin --delete"
+# Delete all local branches that have been merged into HEAD
+# alias gbdm="git branch -d $(git branch --merged | grep -v '^*' | tr -d '\n')"
+alias gco="git checkout"
+alias gcl="git clone --recurse-submodules"
+alias gpl="git pull"
+alias gc="git commit"
+alias gph="git push"
+alias gphu='git push --set-upstream origin $(git_current_branch)'
+alias gpht="git push --tags"
+alias unmerged="git --no-pager branch --no-merged"
 
 alias gfs="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c \"(echo {} && cd {} && git status -sb && echo)\" \; && cd -"
-alias go='gco'
-alias gbra='git_current_branch'
-alias unmerged='git --no-pager branch --no-merged'
-alias gpl='gl'
-alias gph='gp'
-alias gphu='gpsup'
-alias gpht='git push --tags'
-alias gbro='git push origin --delete'
-alias gdc='git diff --color | diff-so-fancy'
-alias gsha='git_prompt_short_sha'
-alias gshal='git_prompt_long_sha'
+
+alias gdc="git diff --color"
 
 # TODO: setup formatting in git config https://git-scm.com/docs/git-config#git-config-color
 alias gl='git log --decorate --graph --pretty=format:"%Cred%cn%Creset: %Cgreen%d%Creset %s %Cblue(%cr)"'
-
