@@ -10,7 +10,7 @@ if test -n "$ZSH_VERSION"; then
 fi
 
 # Install pretty ls
-brew cask install homebrew/cask-fonts/font-hack-nerd-font lsd
+brew cask install lsd
 
 # Install node version manager
 brew install Schniz/tap/fnm
