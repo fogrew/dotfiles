@@ -43,7 +43,6 @@ ZSH_CUSTOM="$ZDOTDIR/custom"
 
 export FZF_BASE=~/.fzf
 
-plugins=(git fzf ripz colored-man-pages_mod fast-syntax-highlighting)
 export ZSH="$HOME/.oh-my-zsh"
 source "$ZSH/oh-my-zsh.sh"
 
