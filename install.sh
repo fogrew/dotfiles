@@ -1,17 +1,13 @@
-# TODO: replace to $(pwd)
+# Use this repo as zsh Custom folder
 cp ./.zshenv ~/
 
-# Install shell extensions
-brew install zsh
+if test -n "$ZSH_VERSION"; then
+	# Install shell extensions
+	brew install zsh
 
-# Make zsh default shell
-chsh -s $(which zsh)
-
-# Install autocompletion
-brew install zsh-completions
-
-# Add spaceship theme
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+	# Make zsh default shell
+	chsh -s $(which zsh)
+fi
 
 # Install pretty ls
 brew cask install homebrew/cask-fonts/font-hack-nerd-font lsd
