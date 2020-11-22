@@ -18,8 +18,6 @@ brew install Schniz/tap/fnm
 # Install usefully terminal
 brew cask install iterm2
 
-# Install shell integration for terminal
-curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | zsh
 
 # Install fuzzy finder
 brew install fzf
