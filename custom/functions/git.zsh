@@ -1,5 +1,6 @@
-# Outputs the name of the current branch
-# Usage example: git add $(git_current_path)
+# Outputs the current path
+# Usage example (add all changed files from any folder):
+# git add $(git_current_path)
 # Using '--quiet' with 'symbolic-ref' will not cause a fatal error (128) if
 # it's not a symbolic ref, but in a Git repo.
 function git_current_path() {
@@ -13,6 +14,20 @@ function git_current_path() {
   echo $ref
 }
 
+function grename() {
+  if [[ -z "$1" || -z "$2" ]]; then
+    echo "Usage: $0 old_branch new_branch"
+    return 1
+  fi
+
+  # Rename branch locally
+  git branch -m "$1" "$2"
+  # Rename branch in origin remote
+  if git push origin :"$1"; then
+    git push --set-upstream origin "$2"
+  fi
+}
+
 local function pull_or_push() {
   if [ $# -eq 2 ]; then
     git $1 $2 `git rev-parse --abbrev-ref HEAD`
@@ -22,9 +37,6 @@ local function pull_or_push() {
 }
 function pull() { pull_or_push "pull" $@ }
 function push() { pull_or_push "push" $@ }
-
-# Git log find by commit message
-function glf() { git log --all --grep="$1"; }
 
 function reset() {
   if [ $# -eq 0 ]; then
@@ -120,10 +132,6 @@ function release() {
 }
 
 
-function deploy() {
-  if [ -f 'bin/deploy' ]; then bin/deploy; else; git push heroku master; fi
-}
-
 # TODO: add phpstorm, diff-so-fancy, sourcetree, git-diff-image
 function dif() {
   if [ "$GIT_ALIASES_ICDIFF" -eq 1 ]; then; git icdiff
@@ -137,35 +145,21 @@ function prune() {
   git branch -D "$1" && git push origin --delete "$1"
 }
 
-
-function clone() {
-  local yes_cd=true
-  while getopts "d:" OPTION
-  do
-    case $OPTION in
-      d)
-        local yes_cd=false
-        shift
-        ;;
-    esac
-  done
-  if [[ -z $2 ]]; then
-    local repo_name=$1
-    while [ "${repo_name%%/*}" != "$repo_name" ]; do
-       repo_name=${repo_name#*/}
-    done
-    repo_name=${repo_name%.*}
-    git clone $1
-    if $yes_cd; then; cd $repo_name; fi
+function git-delete-merged-branches() {
+  if [[ $# != 1 ]]; then
+    mergedInto="master"
   else
-    if [[ $# -eq 3 ]]; then
-      git clone git@github.com:$1/$2.git $3
-      if $yes_cd; then; cd $3; fi
-    else
-      git clone git@github.com:$1/$2.git
-      if $yes_cd; then; cd $2; fi
-    fi
+    mergedInto="$1"
   fi
+
+  currentBranch=$(git symbolic-ref --short HEAD)
+  if [[ "${currentBranch}" != "${mergedInto}" ]]; then
+    echo "You have to be on the same git branch you're using as the merge target"
+    exit 1
+  fi
+
+  git branch --merged "${mergedInto}" | grep -v "\* ${mergedInto}" | xargs -n 1 git branch -d
+
 }
 
 
