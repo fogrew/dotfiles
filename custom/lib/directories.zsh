@@ -20,4 +20,4 @@ alias 8='cd -8'
 alias 9='cd -9'
 
 alias md='mkdir -p'
-alias rd=rmdir
+alias mcd='take' // ohmyzsh
