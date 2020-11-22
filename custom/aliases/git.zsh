@@ -28,14 +28,3 @@ alias gshal='git_prompt_long_sha'
 # TODO: setup formatting in git config https://git-scm.com/docs/git-config#git-config-color
 alias gl='git log --decorate --graph --pretty=format:"%Cred%cn%Creset: %Cgreen%d%Creset %s %Cblue(%cr)"'
 
-# zsh forgit fzf config
-FORGIT_FZF_DEFAULT_OPTS="
---exact
---border
---cycle
---layout=reverse-list
---preview-window='right:70%'
---bind='ctrl-j:preview-down,ctrl-k:preview-up'
---height '100%'
-"
-source "$PLUGINS/forgit/forgit.plugin.zsh"
