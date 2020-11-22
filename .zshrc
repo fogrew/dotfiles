@@ -4,6 +4,7 @@
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 
 export ZSH="$HOME/.oh-my-zsh"
+export ZPLUG_HOME=$(brew --prefix)/opt/zplug
 export FZF_BASE=~/.fzf
 
 local SOURCES=(
@@ -15,6 +16,9 @@ local SOURCES=(
 
 	# init ohmyzsh
 	"$ZSH/oh-my-zsh.sh"
+	"$ZPLUG_HOME/init.zsh"
+
+	"$ZDOTDIR/configs/zplug.zsh"
 
 	# Aliases
 	"$ZDOTDIR/aliases/projects.zsh"

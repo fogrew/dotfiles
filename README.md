@@ -2,11 +2,10 @@
 This is my zsh config. This project contains aliases, functions, third-party plug-ins. It is needed for quick configuration of zsh with one command.
 
 ## Download
-Clone with submodules!
 ```
 mkdir -p ~/projects/configs/
 cd ~/projects/configs/
-git clone --recurse-submodules git@nights.site:Foggy/zsh-config.git
+git clone git@nights.site:Foggy/zsh-config.git
 ```
 
 ## Dependencies
