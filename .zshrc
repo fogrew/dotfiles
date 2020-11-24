@@ -21,7 +21,6 @@ local SOURCES=(
 	"$ZDOTDIR/vars/zplug.zsh"
 
 	# Aliases
-	"$ZDOTDIR/aliases/projects.zsh"
 	"$ZDOTDIR/aliases/nginx.zsh"
 	"$ZDOTDIR/aliases/git.zsh"
 	"$ZDOTDIR/aliases/node.zsh"
@@ -35,6 +34,7 @@ local SOURCES=(
 	"$ZDOTDIR/functions/fzf.zsh"
 	"$ZDOTDIR/functions/1password.zsh"
 	"$ZDOTDIR/functions/imagemagick.zsh"
+	"$ZDOTDIR/functions/bookmarks.zsh"
 
 	
 )

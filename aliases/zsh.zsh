@@ -1,2 +1,2 @@
-alias zshrc="$EDITOR $ZDOTDIR"
-alias ohmyzsh="$EDITOR $ZSH"
+alias zshrc="subl $ZDOTDIR"
+alias ohmyzsh="subl $ZSH"

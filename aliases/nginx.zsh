@@ -2,6 +2,7 @@
 local ngid="/usr/local/etc/nginx"
 
 alias sites="subl $ngid/"
+alias hosts="subl /private/etc/hosts"
 
 alias nginx.logs.error="tail -250f $ngid/logs/error.log"
 alias nginx.logs.access="tail -250f $ngid/logs/access.log"
