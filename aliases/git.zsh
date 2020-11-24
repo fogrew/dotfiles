@@ -2,10 +2,10 @@
 # $ZSH/lib/git.zsh
 # $ZSH/plugins/git/git.plugin.zsh
 
-# GPG init
+# Avoid issues with `gpg` as installed via Homebrew.
+# https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty)
 
-# узнать, как правильно сливать ветки, чтобы при удалении ветки можно было найти историю
 alias g="git"
 alias gaa="git add --all"
 alias gb="git branch"
@@ -21,11 +21,6 @@ alias gc="git commit"
 alias gph="git push"
 alias gphu='git push --set-upstream origin $(git_current_branch)'
 alias gpht="git push --tags"
-alias unmerged="git --no-pager branch --no-merged"
 
 alias gfs="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c \"(echo {} && cd {} && git status -sb && echo)\" \; && cd -"
 
-alias gdc="git diff --color"
-
-# TODO: setup formatting in git config https://git-scm.com/docs/git-config#git-config-color
-alias gl='git log --decorate --graph --pretty=format:"%Cred%cn%Creset: %Cgreen%d%Creset %s %Cblue(%cr)"'

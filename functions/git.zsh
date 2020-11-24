@@ -14,7 +14,7 @@ function git_current_path() {
   echo $ref
 }
 
-function grename() {
+function git_branch_rename() {
   if [[ -z "$1" || -z "$2" ]]; then
     echo "Usage: $0 old_branch new_branch"
     return 1
@@ -46,12 +46,6 @@ function reset() {
     git checkout $curr_branch $1
   fi
 }
-
-function gs() {
-  if [ "$GIT_ALIASES_SHORTER_GIT_STATUS" -ne 1 ]; then; git status
-  else; git status -sb; fi
-}
-# 
 
 function co() {
   git fetch
@@ -130,16 +124,6 @@ function release() {
   else cop master && git tag $1 && git push origin $1;
   fi
 }
-
-
-# TODO: add phpstorm, diff-so-fancy, sourcetree, git-diff-image
-function dif() {
-  if [ "$GIT_ALIASES_ICDIFF" -eq 1 ]; then; git icdiff
-  elif [ "$GIT_ALIASES_ICDIFF" -eq 2 ]; then; git difftool --extcmd icdiff
-  else; git diff; fi
-  git status
-}
-
 
 function prune() {
   git branch -D "$1" && git push origin --delete "$1"
