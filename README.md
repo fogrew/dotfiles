@@ -11,7 +11,7 @@ Quick configuration macos as I like.
 ## Features
 
 * mac os setup
-* [brew](https://brew.sh/) and sowtware installing
+* [brew](https://brew.sh/) and software installing
 * [zsh](https://ohmyz.sh/) config
   * aliases
   * functions
