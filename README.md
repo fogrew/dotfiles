@@ -12,8 +12,5 @@ Zsh tuning is enabled by replacing the `$ZDOTDIR` global zsh variable. It should
 
 ## Install
 
-Just run symlinkings
-
-```sh
-./symlinks.sh
-```
+* Type `./symlinks.sh` to create symlinks
+* Type `./brew.sh` to install software
