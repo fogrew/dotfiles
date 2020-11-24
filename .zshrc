@@ -9,16 +9,16 @@ export FZF_BASE=~/.fzf
 
 local SOURCES=(
 	# Variables and configs
-	"$ZDOTDIR/configs/lang.zsh"
-	"$ZDOTDIR/configs/spaceship-theme.zsh"
-	"$ZDOTDIR/configs/macos-speed-up.zsh"
-	"$ZDOTDIR/configs/forgit.zsh"
+	"$ZDOTDIR/vars/lang.zsh"
+	"$ZDOTDIR/vars/spaceship-theme.zsh"
+	"$ZDOTDIR/vars/macos-speed-up.zsh"
+	"$ZDOTDIR/vars/forgit.zsh"
 
 	# init ohmyzsh
 	"$ZSH/oh-my-zsh.sh"
 	"$ZPLUG_HOME/init.zsh"
 
-	"$ZDOTDIR/configs/zplug.zsh"
+	"$ZDOTDIR/vars/zplug.zsh"
 
 	# Aliases
 	"$ZDOTDIR/aliases/projects.zsh"
