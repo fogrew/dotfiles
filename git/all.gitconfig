@@ -1,0 +1,60 @@
+[includeIf "gitdir:~/projects/"]
+	path = personal.gitconfig
+
+[includeIf "gitdir:~/projects/wrike/"]
+	path = work.gitconfig
+
+[core]
+	excludesfile = ~/.gitignore_global
+	pager = delta --side-by-side --diff-so-fancy --width ${FZF_PREVIEW_COLUMNS:-$COLUMNS}
+
+[branch]
+	# Show most recently changed branches first.
+	sort = -committerdate
+
+[commit]
+	# https://help.github.com/articles/signing-commits-using-gpg/
+	gpgSign = true
+
+[credential]
+    helper = osxkeychain
+    useHttpPath = true
+
+[user]
+	signingkey = 6DEA95A509828055
+
+[delta]
+    line-numbers-left-style = "#444444"
+    line-numbers-right-style = "#444444"
+
+[diff]
+	# Detect copies as well as renames.
+	renames = copies
+
+[merge]
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
+
+[push]
+	# Make `git push` push relevant annotated tags when pushing branches out.
+	followTags = true
+
+[pretty]
+	log = format:"%Cred%cn%Creset: %Cgreen%d%Creset %s %Cblue(%cr)"
+
+[alias]
+	amend = commit --amend --reuse-message=HEAD
+	all = add --all
+	c = clone --recursive
+	p = pull --recurse-submodules
+	phu = push --set-upstream origin
+	unstage = reset HEAD --
+	hard = reset --hard HEAD
+	branches = branch -a
+	unmerged = branch --no-merged
+	merged = branch --merged
+	current = branch --show-current
+	remotes = remote -v
+	path = rev-parse --show-toplevel
+	graph = log --decorate --graph --pretty=log
+	tags = tag -l

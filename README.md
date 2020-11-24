@@ -9,3 +9,11 @@ Zsh tuning is enabled by replacing the `$ZDOTDIR` global zsh variable. It should
   * aliases
   * functions
   * zplug plugins
+
+## Install
+
+Just run symlinkings
+
+```sh
+./symlinks.sh
+```
