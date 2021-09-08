@@ -16,7 +16,7 @@
 # Source: https://vincent.bernat.ch/en/blog/2015-zsh-directory-bookmarks
 
 is-at-least 4.3.12 && () {
-    MARKPATH="$ZDOTDIR/marks"
+    MARKPATH="$HOME/marks"
 
     # Add some static entries
     hash -d log=/var/log
