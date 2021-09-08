@@ -11,7 +11,7 @@ local SOURCES=(
 	# Variables and configs
 	"$ZDOTDIR/vars/lang.zsh"
 	"$ZDOTDIR/vars/spaceship-theme.zsh"
-	"$ZDOTDIR/vars/macos-speed-up.zsh"
+	"$ZDOTDIR/vars/speed-up.zsh"
 	"$ZDOTDIR/vars/forgit.zsh"
 
 	# init ohmyzsh
