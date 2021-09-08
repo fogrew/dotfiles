@@ -16,6 +16,7 @@ alias gbdo="git push origin --delete"
 # Delete all local branches that have been merged into HEAD
 # alias gbdm="git branch -d $(git branch --merged | grep -v '^*' | tr -d '\n')"
 alias gco="git checkout"
+alias gcb="git checkout -b"
 alias gcl="git clone --recurse-submodules"
 alias gpl="git pull"
 alias gc="git commit"
