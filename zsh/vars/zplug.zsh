@@ -1,3 +1,7 @@
+if [[ -z $ZPLUG_HOME ]]; then
+    curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+fi
+
 zplug "plugins/docker-compose", from:oh-my-zsh
 zplug "plugins/fzf", from:oh-my-zsh
 zplug 'wfxr/forgit'
