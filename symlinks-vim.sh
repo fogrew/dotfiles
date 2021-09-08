@@ -1,0 +1,1 @@
+ln -si $(pwd)/.vimrc ~/.vimrc
