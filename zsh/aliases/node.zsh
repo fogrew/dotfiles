@@ -5,6 +5,7 @@ alias rmn="rm -rf ./node_modules"
 alias rmp="rm -rf ./node_modules package-lock.json"
 alias hate.yarn="rm -rf ./node_modules yarn.lock"
 
+alias n='fnm use'
 alias nv='fnm use'
 
 export PATH=~/.fnm/current/bin:$PATH
