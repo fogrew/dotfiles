@@ -4,7 +4,7 @@
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 
 export ZSH="$HOME/.oh-my-zsh"
-export ZPLUG_HOME=$(brew --prefix)/opt/zplug
+export ZPLUG_HOME="$(brew --prefix)/opt/zplug"
 export FZF_BASE=~/.fzf
 
 local SOURCES=(
