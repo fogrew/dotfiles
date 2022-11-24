@@ -1,3 +1,8 @@
 [user]
 	name = Andrey Gurylev
 	email = andrey.gurylev@team.wrike.com
+	signingkey = 2024DBE586F65854
+
+[commit]
+	# https://help.github.com/articles/signing-commits-using-gpg/
+	gpgSign = true

@@ -12,16 +12,9 @@
 	# Show most recently changed branches first.
 	sort = -committerdate
 
-[commit]
-	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgSign = true
-
 [credential]
     helper = osxkeychain
     useHttpPath = true
-
-[user]
-	signingkey = 6DEA95A509828055
 
 [delta]
     line-numbers-left-style = "#444444"
