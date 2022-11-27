@@ -20,11 +20,9 @@ brew "jq"
 brew "lsd"
 brew "mas"
 brew "mkcert"
-brew "mysql@5.7", restart_service: true, link: true
 brew "nginx", restart_service: true
 brew "nmap"
 brew "nss"
-brew "php@7.4", restart_service: true, link: true
 brew "ripgrep"
 brew "sponge"
 brew "vim"
@@ -33,7 +31,6 @@ brew "youtube-dl"
 brew "yubico-piv-tool"
 brew "zplug"
 brew "zsh"
-cask "1password-cli"
 cask "appcleaner"
 cask "discord"
 cask "figma"
@@ -63,10 +60,7 @@ cask "telegram"
 cask "tunnelblick"
 cask "visual-studio-code"
 cask "vnc-viewer"
-mas "1Password 7", id: 1333542190
-mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
 mas "Slack", id: 803453959
-mas "Xcode", id: 497799835
 mas "Yubico Authenticator", id: 1497506650
