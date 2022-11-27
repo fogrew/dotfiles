@@ -60,7 +60,6 @@ cask "telegram"
 cask "tunnelblick"
 cask "visual-studio-code"
 cask "vnc-viewer"
-mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
 mas "Slack", id: 803453959
 mas "Yubico Authenticator", id: 1497506650
