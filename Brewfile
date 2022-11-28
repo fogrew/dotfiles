@@ -5,61 +5,71 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-brew "ansible"
-brew "ffmpeg"
+
+# Package managers
+brew "mas"
+brew "zplug"
 brew "fnm"
+
+# Main things
+cask "spotify"
+cask "syncthing"
+
+# Shell things
+brew "zsh"
 brew "fzf"
+brew "lsd"
+brew "ripgrep"
+cask "font-hack-nerd-font"
+
 brew "git"
 brew "git-delta"
 brew "git-lfs"
 brew "git-standup"
-brew "gnupg", link: false
-brew "libheif"
-brew "imagemagick"
-brew "jq"
-brew "lsd"
-brew "mas"
-brew "mkcert"
-brew "nginx", restart_service: true
-brew "nmap"
-brew "nss"
-brew "ripgrep"
-brew "sponge"
 brew "vim"
+
+# Security things
+cask "keepassxc"
 brew "ykman"
-brew "youtube-dl"
 brew "yubico-piv-tool"
-brew "zplug"
-brew "zsh"
-cask "appcleaner"
-cask "discord"
-cask "figma"
+mas "Yubico Authenticator", id: 1497506650
+brew "gnupg"
+cask "protonvpn"
+brew "nmap"
+
+# Working with media
+brew "ffmpeg"
+brew "imagemagick"
+cask "iina"
+cask "imageoptim"
+brew "libheif"
+brew "youtube-dl"
+
+# Working with Web
+brew "jq"
+brew "mkcert"
+cask "iterm2"
 cask "firefox"
-cask "font-hack-nerd-font"
 cask "google-chrome"
 cask "google-chrome-canary"
 cask "google-drive"
-cask "iina"
-cask "imageoptim"
-cask "iterm2"
-cask "keepassxc"
-cask "keeweb"
-cask "mdimagesizemdimporter"
-cask "notion"
-cask "obs"
-cask "obsidian"
-cask "omnidisksweeper"
-cask "phpstorm"
+cask "figma"
 cask "postman"
-cask "protonvpn"
-cask "qlimagesize"
-cask "spotify"
-cask "sublime-text"
-cask "syncthing"
-cask "telegram"
-cask "tunnelblick"
 cask "visual-studio-code"
-cask "vnc-viewer"
+
+# Databases for personal things
+cask "notion"
+cask "obsidian"
+
+# MacOS enhancements
+cask "qlimagesize"
+cask "mdimagesizemdimporter"
 mas "Magnet", id: 441258766
-mas "Slack", id: 803453959
-mas "Yubico Authenticator", id: 1497506650
+
+# MacOS maintenance of cleanliness
+cask "appcleaner"
+cask "omnidisksweeper"
+
+# Social networking
+cask "discord"
+cask "telegram"
