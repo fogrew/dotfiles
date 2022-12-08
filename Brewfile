@@ -33,7 +33,10 @@ cask "keepassxc"
 brew "ykman"
 brew "yubico-piv-tool"
 mas "Yubico Authenticator", id: 1497506650
+brew "gpg2"
 brew "gnupg"
+brew "pinentry-mac"
+cask "gpg-suite-no-mail"
 cask "protonvpn"
 brew "nmap"
 
