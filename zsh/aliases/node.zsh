@@ -8,7 +8,7 @@ alias hate.yarn="rm -rf ./node_modules yarn.lock"
 alias n='fnm use'
 alias nv='fnm use'
 
-export PATH=~/.fnm/current/bin:$PATH
+eval "$(fnm env --use-on-cd)"
 export FNM_LOGLEVEL=info
 
 autoload -U add-zsh-hook
